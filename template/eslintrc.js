@@ -1,0 +1,99 @@
+module.exports = {
+  "root": true,
+  "env": {
+    "node": true,
+    "commonjs": true,
+    "es6": true,
+    "jquery": false,
+    "jest": true,
+    "jasmine": true
+  },
+  "plugins": [
+    "node",
+    "jest"
+  ],
+  "extends": "eslint:recommended",
+  "parserOptions": {
+    "sourceType": "module"
+  },
+  "rules": {
+    "no-var": [
+      "error"
+    ],
+    "no-console": [
+      "off"
+    ],
+    "no-mixed-spaces-and-tabs": [
+      "warn"
+    ],
+    "indent": [
+      "error",
+      2,
+      {
+        "SwitchCase": 1
+      }
+    ],
+    "linebreak-style": [
+      "error",
+      "unix"
+    ],
+    "quotes": [
+      "error",
+      "single"
+    ],
+    "semi": [
+      "error",
+      "never"
+    ],
+    "max-lines": [
+      "error",
+      {
+        "max": 120,
+        "skipBlankLines": true,
+        "skipComments": true
+      }
+    ],
+    "max-depth": [
+      "error",
+      3
+    ],
+    "max-params": [
+      "error",
+      3
+    ],
+    "no-unused-vars": [
+      "warn",
+      {
+        "args": "none"
+      }
+    ],
+    "max-len": [
+      "error",
+      {
+        "code": 120,
+        "tabWidth": 2,
+        "comments": 200
+      }
+    ],
+    "jest/no-large-snapshots": [
+      "warn"
+    ],
+    "node/no-unsupported-features/es-syntax": [
+      "error"
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "*.test.js",
+        "*.spec.js"
+      ],
+      "rules": {
+        "max-lines": [
+          "error",
+          300
+        ]
+      }
+    }
+  ]
+}

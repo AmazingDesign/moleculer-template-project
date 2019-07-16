@@ -6,9 +6,10 @@
     "dev": "moleculer-runner --repl --hot services",
     "start": "moleculer-runner",
     "cli": "moleculer connect {{transporter}}"{{#jest}},
-    "ci": "jest --watch",
-    "test": "jest --coverage"{{/jest}}{{#lint}},
-    "lint": "eslint services"{{/lint}}{{#docker}},
+    "test": "jest --watch",
+    "test:all": "jest --watchAll",
+    "test:coverage": "jest --coverage"{{/jest}}{{#lint}},
+    "fix": "eslint --fix ./services"{{/lint}}{{#docker}},
     "dc:up": "docker-compose up --build -d",
     "dc:down": "docker-compose down"{{/docker}}
   },
@@ -16,10 +17,12 @@
     "microservices",
     "moleculer"
   ],
-  "author": "",
+  "author": "AmazingDesign.eu",
   "devDependencies": {
     {{#lint}}
     "eslint": "^5.10.0",
+    "eslint-plugin-jest": "^22.8.0",
+    "eslint-plugin-node": "^9.1.0",
     {{/lint}}
     {{#jest}}
     "jest": "^23.6.0",
