@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "My Moleculer microservices project",
   "scripts": {
-    "dev": "moleculer-runner --repl --hot services",
+    "dev": "moleculer-runner --env --repl --hot services",
     "start": "moleculer-runner",
     "cli": "moleculer connect {{transporter}}"{{#jest}},
     "test": "jest --watch",
@@ -31,6 +31,7 @@
     "moleculer-repl": "^0.5.3"
   },
   "dependencies": {
+    "dotenv": "^8.0.0",
     {{#apiGW}}
     "moleculer-web": "^0.8.0",
     {{/apiGW}}
