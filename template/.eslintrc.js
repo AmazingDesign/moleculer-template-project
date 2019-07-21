@@ -59,7 +59,7 @@ module.exports = {
     ],
     "max-params": [
       "error",
-      3
+      4
     ],
     "no-unused-vars": [
       "warn",
