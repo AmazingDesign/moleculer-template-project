@@ -14,7 +14,10 @@ module.exports = {
   ],
   "extends": "eslint:recommended",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
   },
   "rules": {
     "no-var": [
@@ -74,6 +77,11 @@ module.exports = {
         "tabWidth": 2,
         "comments": 200
       }
+    ],
+    "curly": [
+      "error",
+      "multi-line",
+      "consistent"
     ],
     "jest/no-large-snapshots": [
       "warn"
