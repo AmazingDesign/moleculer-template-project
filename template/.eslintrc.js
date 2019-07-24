@@ -1,3 +1,5 @@
+/* eslint-disable quotes */
+
 module.exports = {
   "root": true,
   "env": {
@@ -14,10 +16,7 @@ module.exports = {
   ],
   "extends": "eslint:recommended",
   "parserOptions": {
-    "sourceType": "module",
-    "ecmaFeatures": {
-      "experimentalObjectRestSpread": true
-    }
+    "sourceType": "module"
   },
   "rules": {
     "no-var": [
@@ -62,7 +61,7 @@ module.exports = {
     ],
     "max-params": [
       "error",
-      4
+      3
     ],
     "no-unused-vars": [
       "warn",
@@ -77,11 +76,6 @@ module.exports = {
         "tabWidth": 2,
         "comments": 200
       }
-    ],
-    "curly": [
-      "error",
-      "multi-line",
-      "consistent"
     ],
     "jest/no-large-snapshots": [
       "warn"
