@@ -1,6 +1,4 @@
-/* eslint-disable quotes */
-
-module.exports = {
+{
   "root": true,
   "env": {
     "node": true,
@@ -16,7 +14,10 @@ module.exports = {
   ],
   "extends": "eslint:recommended",
   "parserOptions": {
-    "sourceType": "module"
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "experimentalObjectRestSpread": true
+    }
   },
   "rules": {
     "no-var": [
@@ -61,7 +62,7 @@ module.exports = {
     ],
     "max-params": [
       "error",
-      3
+      4
     ],
     "no-unused-vars": [
       "warn",
@@ -80,6 +81,8 @@ module.exports = {
     "jest/no-large-snapshots": [
       "warn"
     ],
+    "jest/no-identical-title": "error",
+    "jest/valid-expect-in-promise": "error",
     "node/no-unsupported-features/es-syntax": [
       "error"
     ]
